@@ -1,19 +1,36 @@
 #include "bits/stdc++.h"
 using namespace std;
+using ll = long long;
+#define int ll
+#define endl '\n'
+const int mod = 1000000007;
+// clang-format off
+template<typename typC,typename typD> istream &operator>>(istream &cin,pair<typC,typD> &a) { return cin>>a.first>>a.second; }
+template<typename typC> istream &operator>>(istream &cin,vector<typC> &a) { for (auto &x:a) cin>>x; return cin; }
+template<typename typC,typename typD> ostream &operator<<(ostream &cout,const pair<typC,typD> &a) { return cout<<a.first<<' '<<a.second; }
+template<typename typC,typename typD> ostream &operator<<(ostream &cout,const vector<pair<typC,typD>> &a) { for (auto &x:a) cout<<x<<'\n'; return cout; }
+template<typename typC> ostream &operator<<(ostream &cout,const vector<typC> &a) { int n=a.size(); if (!n) return cout; cout<<a[0]; for (int i=1; i<n; i++) cout<<' '<<a[i]; return cout; }
+// clang-format on
 
-bool prime(int x)
+void solve()
 {
-	int divisors = 0;
-	for(int i = 1; i <= x; i++)
-		if(x % i == 0) divisors++;
-	return divisors == 2;
+	ll t, m, n, a, b;
+	string h;
+	cin >> n;
+	if (n % 2)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
 }
-
-int main()
+int32_t main()
 {
-	int l, r;
-	cin >> l >> r;
-	for(int i = l; i <= r; i++)
-		if(prime(i))
-			cout << i << endl;
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		solve();
+	}
+	return 0;
 }
